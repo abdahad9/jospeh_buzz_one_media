@@ -1,0 +1,93 @@
+.header {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 0;
+}
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+  background: transparent;
+}
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  font-weight: 500;
+  list-style: none;
+}
+.bookBtn {
+  background: #FFA800;
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.bookBtn:hover {
+  background: #ffb733;
+}
+.heroWrapper {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heroContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.heroText {
+  max-width: 36rem;
+  color: #fff;
+}
+.heroText h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.heroText p {
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+.heroActions {
+  display: flex;
+  gap: 1rem;
+}
+.servicesBtn {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.servicesBtn:hover {
+  background: #fff;
+  color: #000;
+}
+.heroImage {
+  margin-left: 3rem;
+} 
