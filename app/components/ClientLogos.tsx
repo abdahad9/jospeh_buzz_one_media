@@ -12,7 +12,7 @@ const logos = [
 
 export default function ClientLogos() {
   return (
-    <section className="w-full py-8 px-8 sm:px-8 md:px-24 flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 bg-transparent">
+    <section className="w-full py-12 px-8 sm:px-8 md:px-24 flex flex-col md:flex-row flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 bg-transparent">
       {logos.map((logo) => (
         <Image
           key={logo.alt}
