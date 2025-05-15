@@ -34,32 +34,6 @@ const services = [
   },
 ];
 
-function getCardClasses(idx: number) {
-  // Mobile: 1 col, Tablet: 2 cols, Desktop: 3 cols
-  let classes = "border-[#AAB2E4] ";
-  // Mobile (1 col)
-  if (idx < services.length - 1) classes += " border-b ";
-  if (idx === 0) classes += " rounded-tl-lg rounded-tr-lg ";
-  if (idx === services.length - 1) classes += " rounded-bl-lg rounded-br-lg ";
-  // Tablet (2 cols)
-  classes +=
-    " sm:border-b sm:border-r-0 sm:rounded-none ";
-  if (idx % 2 === 0 && idx < services.length - 2) classes += " sm:border-r ";
-  if (idx === 0) classes += " sm:rounded-tl-lg ";
-  if (idx === 1) classes += " sm:rounded-tr-lg ";
-  if (idx === services.length - 2) classes += " sm:rounded-bl-lg ";
-  if (idx === services.length - 1) classes += " sm:rounded-br-lg ";
-  // Desktop (3 cols)
-  classes +=
-    " lg:border-b lg:border-r-0 lg:rounded-none ";
-  if ((idx + 1) % 3 !== 0 && idx < services.length - 3) classes += " lg:border-r ";
-  if (idx === 0) classes += " lg:rounded-tl-lg ";
-  if (idx === 2) classes += " lg:rounded-tr-lg ";
-  if (idx === 3) classes += " lg:rounded-bl-lg ";
-  if (idx === 5) classes += " lg:rounded-br-lg ";
-  return classes;
-}
-
 export default function ExpertiseServices() {
   return (
     <section className="w-full bg-[#EBF4FB] py-16 px-4 sm:px-8 md:px-16 lg:px-18">
@@ -93,7 +67,7 @@ export default function ExpertiseServices() {
                     <h3 className="text-3xl font-medium text-[#0E0E0E] mb-3 text-center md:text-left">{service.title}</h3>
                     <p className="text-[#505050] text-base font-light mb-4 pr-0 md:pr-10 text-center md:text-left">{service.desc}</p>
                     <div className="flex justify-center md:justify-start">
-                      <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max">
+                      <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max border-b border-[#031CA6]">
                         Learn More
                         <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
                       </Link>

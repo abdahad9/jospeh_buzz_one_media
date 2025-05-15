@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col items-center lg:items-start text-center lg:text-left">
             <Image src="/images/logo_dark.png" alt="Buzz One Media" width={120} height={40} className="mb-8 mx-auto lg:mx-0" />
             <h3 className="text-4xl font-medium text-[#151515] mb-8 leading-tight text-center lg:text-left">
-              Ready to take your<br />business to the next level?<br />Let's start today!
+              Ready to take your<br />business to the next level?<br />Let&apos;s start today!
             </h3>
             <div className="flex gap-6 justify-center lg:justify-start">
               {socialLinks.map((social) => (

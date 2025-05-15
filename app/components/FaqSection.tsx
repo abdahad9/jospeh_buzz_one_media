@@ -35,7 +35,7 @@ export default function FaqSection() {
         {/* Left: Heading and Contact */}
         <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
           <h2 className="text-5xl sm:text-6xl font-normal text-[#151515] mb-10 leading-tight text-center lg:text-left">
-            Have Questions?<br />We've Got Answers
+            Have Questions?<br />We&apos;ve Got Answers
           </h2>
           <p className="text-[#505050] text-xl font-light mb-10 max-w-xl text-center lg:text-left">
             Get clarity on the most common questions about our services, processes, and how we can help your business thrive.

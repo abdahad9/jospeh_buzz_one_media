@@ -12,7 +12,7 @@ export default function GrowthPartner() {
           </div>
           <div className="md:col-span-2 md:pl-8 text-center md:text-left">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal mb-4 text-[#151515] leading-tight text-center md:text-left">Your Digital Growth Partner</h2>
-            <p className="text-base sm:text-lg text-[#0E0E0E] font-light mb-8 max-w-2xl mx-auto md:mx-0 text-center md:text-left">We're a team of creative thinkers and marketing experts dedicated to driving measurable results. With a passion for innovation and strategy, we help businesses like yours thrive in the digital landscape.</p>
+            <p className="text-base sm:text-lg text-[#0E0E0E] font-light mb-8 max-w-2xl mx-auto md:mx-0 text-center md:text-left">We&apos;re a team of creative thinkers and marketing experts dedicated to driving measurable results. With a passion for innovation and strategy, we help businesses like yours thrive in the digital landscape.</p>
             <div className="flex justify-center md:justify-start">
               <Link href="#" className="inline-flex items-center text-[#031CA6] text-base sm:text-lg font-normal group border-b border-[#031CA6] pb-0.5 hover:border-blue-700 transition-all">
                 Learn More

@@ -13,7 +13,7 @@ export default function HeroBanner() {
           className="mb-8 text-base sm:text-xl font-normal leading-[1.5] tracking-[0.5px] text-center md:text-left"
         >
           Unlock your business potential with tailored digital marketing strategies.
-          Let's create impactful solutions to help you stand out and succeed in the digital era.
+          Let&apos;s create impactful solutions to help you stand out and succeed in the digital era.
         </p>
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 w-fit items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
           <button
