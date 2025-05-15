@@ -40,12 +40,12 @@ export default function Testimonials() {
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 text-[#151515] w-full md:w-3xl pr-0 md:pr-40 leading-10 md:leading-18 text-center md:text-left">Hear From Our Clients</h2>
           </div>
           <p className="text-[#0E0E0E] text-lg font-light max-w-xl mt-2 md:mt-30 w-96 text-center md:text-left mx-auto md:mx-0">
-                See how we've helped businesses like yours succeed with our innovative digital marketing strategies.
+                See how we&apos;ve helped businesses like yours succeed with our innovative digital marketing strategies.
           </p>
         </div>
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-gray-200 w-full">
-          {testimonials.map((t, idx) => (
+          {testimonials.map((t) => (
             <div
               key={t.name}
               className={`bg-[#F7F8FE] border-b border-gray-200 md:border-b-0 md:border-r last:border-r-0 py-12 px-4 sm:px-8 md:px-16 flex flex-col justify-between text-center md:text-left`}
@@ -59,7 +59,7 @@ export default function Testimonials() {
               {/* Title */}
               <div className="text-2xl font-semibold text-[#151515] mb-8 text-center md:text-left">{t.title}</div>
               {/* Quote */}
-              <div className="text-lg text-[#151515] font-light mb-8 w-full max-w-md mx-auto md:mx-0 text-center md:text-left">"{t.quote}"</div>
+              <div className="text-lg text-[#151515] font-light mb-8 w-full max-w-md mx-auto md:mx-0 text-center md:text-left">&quot;{t.quote}&quot;</div>
               {/* User Info */}
               <div className="flex items-center gap-3 mt-auto mx-auto md:mx-0 justify-center md:justify-start text-center md:text-left">
                 <Image src={t.avatar} alt={t.name} width={60} height={60} className="rounded-full" />

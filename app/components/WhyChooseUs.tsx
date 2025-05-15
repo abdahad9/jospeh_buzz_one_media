@@ -30,7 +30,7 @@ export default function WhyChooseUs() {
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal mb-16 text-[#151515] leading-tight text-center md:text-left">What Makes Us Different</h2>
           <div className="flex flex-col gap-6 mt-12 lg:pr-20">
-            {features.map((feature, idx) => (
+            {features.map((feature) => (
               <div key={feature.title} className="flex flex-col md:flex-row items-center md:items-start gap-4 border-b border-gray-200 mt-4 text-center md:text-left">
                 <div className="flex-shrink-0 w-18 h-18 flex items-center justify-center rounded-lg mx-auto md:mx-0">
                   <Image src={feature.icon} alt={feature.title} width={60} height={60} style={{ width: '80px', height: '80px' }}/>

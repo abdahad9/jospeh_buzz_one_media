@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./components/Header";
 import HeroBanner from "./components/HeroBanner";
 import GrowthPartner from "./components/GrowthPartner";
