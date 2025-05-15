@@ -7,7 +7,10 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import CallToActionBanner from "./components/CallToActionBanner";
 import HowWeWork from "./components/HowWeWork";
 import PricingPlans from "./components/PricingPlans";
-
+import Testimonials from "./components/Testimonials";
+import CtaBanner from "./components/CtaBanner";
+import FaqSection from "./components/FaqSection";
+import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main>
@@ -20,6 +23,10 @@ export default function Home() {
       <CallToActionBanner />
       <HowWeWork />
       <PricingPlans />
+      <Testimonials />
+      <CtaBanner /> 
+      <FaqSection />
+      <Footer />
     </main>
   );
 }

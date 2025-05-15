@@ -17,7 +17,7 @@ export default function Header({
       }}
     >
       <Navbar />
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 py-16 flex flex-col md:flex-row items-center justify-between flex-1">
+      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 pt-16 pb-6 flex flex-col md:flex-row items-center justify-between flex-1">
         {children}
       </div>
       <ClientLogos />

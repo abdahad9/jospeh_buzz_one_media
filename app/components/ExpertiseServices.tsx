@@ -65,12 +65,12 @@ export default function ExpertiseServices() {
     <section className="w-full bg-[#EBF4FB] py-16 px-4 sm:px-8 md:px-16 lg:px-18">
      <div className="w-full mx-auto">
         <div className="mb-10">
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-2 mb-2 justify-center md:justify-start">
             <span className="w-2 h-2 bg-[#89BCE8] inline-block" />
             <span className="text-[#505050] text-base font-normal">What we do</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal my-6 text-[#151515] leading-tight ">Our Expertise at Your Service</h2>
-          <p className="text-base sm:text-lg text-[#0E0E0E] font-light max-w-6xl">From SEO to social media campaigns, web design to content marketing, we provide a wide range of digital marketing services to grow your brand and connect with your audience effectively.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal my-6 text-[#151515] leading-tight text-center md:text-left">Our Expertise at Your Service</h2>
+          <p className="text-base sm:text-lg text-[#0E0E0E] font-light max-w-6xl mx-auto md:mx-0 text-center md:text-left">From SEO to social media campaigns, web design to content marketing, we provide a wide range of digital marketing services to grow your brand and connect with your audience effectively.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[#AAB2E4] overflow-hidden">
           {services.map((service, idx: number) => {
@@ -85,24 +85,26 @@ export default function ExpertiseServices() {
             return (
               <div
                 key={service.title}
-                className={`flex flex-col gap-4 p-8 ${borderClasses}`}
+                className={`flex flex-col gap-4 p-8 text-center md:text-left items-center md:items-start ${borderClasses}`}
               >
-                <div className="flex flex-col md:flex-row items-start gap-3 mb-1">
-                  <Image src={service.icon} alt={service.title} width={80} height={80} />
-                  <div className="md:mx-4 mt-2 md:mt-0">
-                    <h3 className="text-3xl font-medium text-[#0E0E0E] mb-3">{service.title}</h3>
-                    <p className="text-[#505050] text-base font-light mb-4 pr-0 md:pr-10">{service.desc}</p>
-                    <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max">
-                      Learn More
-                      <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
-                    </Link>
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-3 mb-1 w-full">
+                  <Image src={service.icon} alt={service.title} width={80} height={80} className="mx-auto md:mx-0" />
+                  <div className="md:mx-4 mt-2 md:mt-0 w-full">
+                    <h3 className="text-3xl font-medium text-[#0E0E0E] mb-3 text-center md:text-left">{service.title}</h3>
+                    <p className="text-[#505050] text-base font-light mb-4 pr-0 md:pr-10 text-center md:text-left">{service.desc}</p>
+                    <div className="flex justify-center md:justify-start">
+                      <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max">
+                        Learn More
+                        <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center md:justify-start">
           <button className="bg-[#FFA800] text-black px-10 cursor-pointer py-4 font-normal text-lg hover:bg-[#ffb733] transition">See More</button>
         </div>
       </div>

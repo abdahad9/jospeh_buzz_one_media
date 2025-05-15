@@ -51,7 +51,7 @@ export default function Navbar() {
       </ul>
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className="absolute top-full left-0 w-full bg-[#181818] text-white font-medium text-lg flex flex-col gap-4 py-6 px-6 md:hidden shadow-lg z-30 animate-fade-in">
+        <ul className="absolute top-full left-0 w-full bg-[#181818] text-white font-medium text-lg flex flex-col gap-4 py-6 px-6 md:hidden shadow-lg z-40 animate-fade-in">
           <li>
             <Link href="/about" className="block py-2" onClick={() => setMenuOpen(false)}>About</Link>
           </li>
