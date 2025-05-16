@@ -4,8 +4,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Image from "next/image";
 import StatsSection from "../components/StatsSection";
-import Link from "next/link";
-import MissionVisionSection from "../components/MissionVisionSection";
+import MissionVisionSection from "./MissionVisionSection";
 import ExpertiseSection from "../components/ExpertiseServices";
 import MeetOurTeam from "./MeetOurTeam";
 export default function About() {
