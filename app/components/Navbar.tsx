@@ -9,7 +9,9 @@ export default function Navbar() {
 
   return (
     <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-6 bg-transparent border-b" style={{ borderBottomWidth: '1px', borderBottomColor: 'rgba(255,255,255,0.15)' }}>
-      <Image src="/images/logo1.png" alt="Logo" width={80} height={32} style={{ width: 'auto', height: 'auto' }}/>
+      <Link href="/">
+        <Image src="/images/logo1.png" alt="Logo" width={80} height={32} style={{ width: 'auto', height: 'auto' }}/>
+      </Link>
       {/* Hamburger for mobile */}
       <button
         className="md:hidden flex flex-col justify-center items-center w-10 h-10 text-white focus:outline-none"
