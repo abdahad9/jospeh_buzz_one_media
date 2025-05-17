@@ -27,7 +27,10 @@ export default function Navbar() {
         <li>
           <Link href="/about" className="hover:underline transition">About</Link>
         </li>
-        <li className="relative group">
+        <li>
+          <Link href="/services" className="hover:underline transition">Services</Link>
+        </li>
+        {/* <li className="relative group">
           <button className="hover:underline transition flex items-center gap-1 focus:outline-none" type="button">
             Services
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
@@ -37,7 +40,7 @@ export default function Navbar() {
             <li><Link href="/services/ppc" className="block px-4 py-2 hover:bg-gray-100">PPC</Link></li>
             <li><Link href="/services/content" className="block px-4 py-2 hover:bg-gray-100">Content Marketing</Link></li>
           </ul>
-        </li>
+        </li> */}
         <li>
           <Link href="/works" className="hover:underline transition">Works</Link>
         </li>
