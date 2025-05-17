@@ -95,7 +95,7 @@ export default function ServicesList() {
         We provide comprehensive services that help businesses run smoothly and efficiently.
       </h2>
       <div className="space-y-12 mt-20">
-        {services.map((service, idx) => (
+        {services.map((service) => (
           <div key={service.title}>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-0 pb-8 border-b border-gray-200">
               {/* Left: Icon, Title, Tags */}
