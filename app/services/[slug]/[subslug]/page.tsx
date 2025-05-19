@@ -54,7 +54,7 @@ const WhatClientsGet = [
     },
   ];
 
-export default async function SubServiceDetail({ params }: { params: { slug: string; subslug: string } }) {
+export default async function Page({ params }: { params: { slug: string; subslug: string } }) {
   const service = services.find((s) => s.slug === params.slug);
   if (!service || !service.subServices) return notFound();
   const subService = service.subServices.find((ss) => ss.subslug === params.subslug);
