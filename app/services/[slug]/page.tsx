@@ -38,7 +38,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
               </p>
               <div className="flex justify-center md:justify-start">
                 <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-medium px-10 py-4 transition w-fit md:w-auto text-base md:text-lg text-center md:text-left">
-                    Let's Talk
+                    Let&apos;s Talk
                 </button>
               </div>
             </div>
@@ -69,9 +69,9 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
               </div>
               <div className="md:w-2/4 w-full text-[#505050] text-base md:text-lg font-light flex flex-col gap-6">
                 <p>At Buzz One Media, we specialize in creating compelling content that not only engages but also converts. Our content marketing service is designed to help your brand tell its story in a way that connects with your audience and drives measurable results. From blogs and articles to social media content and email campaigns, we ensure every piece of content serves a strategic purpose.</p>
-                <p>By combining creativity, data-driven insights, and industry expertise, we build a content strategy tailored to your brand's goals. Whether it's increasing website traffic, building brand awareness, or nurturing leads, our team delivers impactful solutions to keep your audience engaged.</p>
+                <p>By combining creativity, data-driven insights, and industry expertise, we build a content strategy tailored to your brand&apos;s goals. Whether it&apos;s increasing website traffic, building brand awareness, or nurturing leads, our team delivers impactful solutions to keep your audience engaged.</p>
                 <div>
-                  <span className="block mb-2 font-light">What you'll get with our Content Marketing Service:</span>
+                  <span className="block mb-2 font-light">What you&apos;ll get with our Content Marketing Service:</span>
                   <ul className="list-disc pl-6 space-y-1">
                     <li>A tailored content strategy that aligns with your business objectives.</li>
                     <li>High-quality content creation, from blogs to social media posts.</li>
@@ -86,7 +86,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
             <div className="max-w-full mx-auto px-4 sm:px-8 md:px-16 lg:px-18 py-16 flex flex-col md:flex-row gap-12 text-center md:text-left">
               {/* Left: Heading, Description, Button */}
               <div className="md:w-2/4 w-full flex flex-col gap-8 md:pr-60 justify-center md:justify-start">
-                <h2 className="text-2xl md:text-5xl md:leading-15 font-medium text-[#181818]">What's Included in Our Content Marketing</h2>
+                <h2 className="text-2xl md:text-5xl md:leading-15 font-medium text-[#181818]">What&apos;s Included in Our Content Marketing</h2>
                 <p className="text-[#505050] text-base md:text-lg font-light">Our comprehensive content marketing service covers all the essentials to help your brand stand out.</p>
                 <div className="flex justify-center md:justify-start text-center md:text-left">
                     <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-normal px-10 py-4 transition w-fit md:w-fit text-base md:text-lg">Let&apos;s Talk</button>

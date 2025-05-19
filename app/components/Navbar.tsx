@@ -11,7 +11,6 @@ interface NavbarProps {
 
 export default function Navbar({ bgClass = "bg-transparent", textClass = "text-white" }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
 
   // Choose logo based on background
