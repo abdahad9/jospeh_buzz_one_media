@@ -1,92 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
-const services = [
-  {
-    icon: "/images/flower.svg",
-    title: "Content Marketing",
-    tags: [
-      "Website Content",
-      "Newsletter Writing",
-      "Articles or Blog",
-      "E-Book Writing",
-      "Script Writing"
-    ],
-    description:
-      "Our content marketing services include blog posts, and creative copy designed to increase traffic, build trust, and position your brand.",
-    link: "#"
-  },
-  {
-    icon: "/images/monitor.svg",
-    title: "Website Designer",
-    tags: [
-      "Business Website",
-      "Consulting Website",
-      "Landing Page",
-      "Non-Profit Website",
-      "E-Commerce",
-      "See More.."
-    ],
-    description:
-      "We design visually appealing, user-friendly, and responsive websites tailored to your brand.",
-    link: "#"
-  },
-  {
-    icon: "/images/Calendar.svg",
-    title: "SEO Service",
-    tags: [
-      "E-Commerce Service",
-      "Google Maps",
-      "Local SEO",
-      "Mobile SEO",
-      "National SEO"
-    ],
-    description:
-      "Boost your online visibility and rank higher on search engines with our comprehensive SEO strategies.",
-    link: "#"
-  },
-  {
-    icon: "/images/Calendar.svg",
-    title: "Virtual Assistant",
-    tags: [
-      "Email Management",
-      "Calendar Management",
-      "Lead Generation",
-      "Market Research",
-      "See More.."
-    ],
-    description:
-      "From administrative tasks to managing schedules and emails, our skilled assistants streamline your daily operations.",
-    link: "#"
-  },
-  {
-    icon: "/images/Calendar.svg",
-    title: "Social Media",
-    tags: [
-      "Social Media Content",
-      "Video Content",
-      "Ads Content",
-      "Social Media Admin",
-      "Social Media Analyst"
-    ],
-    description:
-      "Grow your brand's presence on social platforms with strategic content, consistent engagement, and targeted campaigns.",
-    link: "#"
-  },
-  {
-    icon: "/images/Calendar.svg",
-    title: "Automations",
-    tags: [
-      "Reputation Management",
-      "Sales Funnels",
-      "SMS Marketing",
-      "Workflow Automation"
-    ],
-    description:
-      "From email marketing to task automation, we integrate smart tools that save you time, reduce errors, and improve productivity.",
-    link: "#"
-  }
-];
+import services from "./servicesData";
 
 export default function ServicesList() {
   return (
@@ -108,7 +22,8 @@ export default function ServicesList() {
                   {service.tags.map((tag) => (
                     <span key={tag} className="inline-flex items-center bg-[#F1F3FF] text-[#031CA6] text-xs sm:text-sm font-light px-3 py-2 rounded-md whitespace-nowrap">
                       {tag}
-                      <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} />
+                      {tag != "See More..." && <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} />}
+                      {/* <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} /> */}
                     </span>
                   ))}
                 </div>
@@ -118,7 +33,7 @@ export default function ServicesList() {
                 <p className="text-gray-600 text-base mb-4 md:mb-8">
                   {service.description}
                 </p>
-                <Link href={service.link} className="inline-flex items-center text-[#031CA6] text-base sm:text-lg font-light group border-b-1 border-[#031CA6] pb-0.5 hover:border-blue-700 transition-all">
+                <Link href={`/services/${service.slug}`} className="inline-flex items-center text-[#031CA6] text-base sm:text-lg font-light group border-b-1 border-[#031CA6] pb-0.5 hover:border-blue-700 transition-all">
                   More Detail
                   <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={20} height={20} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform inline" />
                 </Link>
