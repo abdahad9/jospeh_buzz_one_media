@@ -23,7 +23,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
   };
 
   return (
-    <nav className={`relative z-10 flex items-center justify-between px-6 md:px-12 py-6 ${bgClass} border-b`} style={{ borderBottomWidth: '1px', borderBottomColor: bgClass === 'bg-white' ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)' }}>
+    <nav className={`relative z-12 flex items-center justify-between px-6 md:px-12 py-6 ${bgClass} border-b`} style={{ borderBottomWidth: '1px', borderBottomColor: bgClass === 'bg-white' ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)' }}>
       <Link href="/">
         <Image src={logoSrc} alt="Logo" width={80} height={32} style={{ width: 'auto', height: 'auto' }}/>
       </Link>
@@ -52,7 +52,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
           <Link href="/pricing" className={`${isActive("/pricing") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Pricing</Link>
         </li>
         <li>
-          <Link href="/insight" className={`${isActive("/insight") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Insight</Link>
+          <Link href="/blog" className={`${isActive("/blog") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Insight</Link>
         </li>
         <li>
           <Link href="/contact" className={`${isActive("/contact") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Contact</Link>
@@ -60,7 +60,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
       </ul>
       {/* Mobile menu */}
       {menuOpen && (
-        <ul className={`absolute top-full left-0 w-full bg-[#181818] font-medium text-lg flex flex-col gap-4 py-6 px-6 md:hidden shadow-lg z-40 animate-fade-in ${textClass}`}>
+        <ul className={`absolute top-full left-0 w-full bg-[#181818] font-medium text-lg flex flex-col gap-4 py-6 px-6 md:hidden shadow-lg z-4 animate-fade-in ${textClass}`}>
           <li>
             <Link href="/about" className={`block py-2 ${isActive("/about") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>About</Link>
           </li>
@@ -74,7 +74,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
             <Link href="/pricing" className={`block py-2 ${isActive("/pricing") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Pricing</Link>
           </li>
           <li>
-            <Link href="/insight" className={`block py-2 ${isActive("/insight") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Insight</Link>
+            <Link href="/blog" className={`block py-2 ${isActive("/blog") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Insight</Link>
           </li>
           <li>
             <Link href="/contact" className={`block py-2 ${isActive("/contact") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Contact</Link>
