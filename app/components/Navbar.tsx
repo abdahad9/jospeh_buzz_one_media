@@ -46,7 +46,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
           <Link href="/services" className={`${isActive("/services") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Services</Link>
         </li>
         <li>
-          <Link href="/works" className={`${isActive("/works") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Works</Link>
+          <Link href="/portfolio" className={`${isActive("/portfolio") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Works</Link>
         </li>
         <li>
           <Link href="/pricing" className={`${isActive("/pricing") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>Pricing</Link>

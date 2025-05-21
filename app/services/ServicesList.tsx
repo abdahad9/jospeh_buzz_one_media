@@ -35,7 +35,7 @@ export default function ServicesList() {
                 </p>
                 <Link href={`/services/${service.slug}`} className="inline-flex items-center text-[#031CA6] text-base sm:text-lg font-light group border-b-1 border-[#031CA6] pb-0.5 hover:border-blue-700 transition-all">
                   More Detail
-                  <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={20} height={20} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform inline" />
+                  <Image src="/images/arrow-right-colored.svg" alt="Right Arrow" width={20} height={20} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform inline" />
                 </Link>
               </div>
             </div>

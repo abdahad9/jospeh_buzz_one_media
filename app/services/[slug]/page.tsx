@@ -8,8 +8,10 @@ import CtaBanner from "@/app/components/CtaBanner";
 import FaqSection from "@/app/components/FaqSection";
 import Footer from "@/app/components/Footer";   
 import OurServices from "../ourServices";
-export default function ServiceDetail({ params }: { params: { slug: string } }) {
-  const service = services.find((s) => s.slug === params.slug);
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const service = services.find((s) => s.slug === slug);
   if (!service) return notFound();
 
   // Only show these sections for Content Marketing for now

@@ -54,11 +54,18 @@ const WhatClientsGet = [
     },
   ];
 
-export default async function Page({ params }: { params: { slug: string; subslug: string } }) {
-  const service = services.find((s) => s.slug === params.slug);
-  if (!service || !service.subServices) return notFound();
-  const subService = service.subServices.find((ss) => ss.subslug === params.subslug);
-  if (!subService) return notFound();
+  export default async function Page({
+      params,
+    }: {
+      params: Promise<{ slug: string, subslug: string }>
+    }) {
+    const { slug, subslug } = await params
+  
+    const service = services.find((s) => s.slug === slug);
+    if (!service || !service.subServices) return notFound();
+  
+    const subService = service.subServices.find((ss) => ss.subslug === subslug);
+    if (!subService) return notFound();
   
 
   return (
