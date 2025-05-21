@@ -1,9 +1,7 @@
 // import services from "../servicesData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../../components/Navbar";
-import HowWeWork from "@/app/components/HowWeWork";
 import CtaBanner from "@/app/components/CtaBanner";
 import FaqSection from "@/app/components/FaqSection";
 import Footer from "@/app/components/Footer";   

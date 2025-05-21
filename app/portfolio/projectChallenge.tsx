@@ -2,7 +2,7 @@ import Image from "next/image";
 import cases from "./casesData";    
 import { notFound } from "next/navigation";
 
-export default function ProjectChallenge({ slug }: { slug: any }) {
+export default function ProjectChallenge({ slug }: { slug: string }) {
     const portfolioCase = cases.find((c) => c.slug === slug);
     if (!portfolioCase) return notFound();
     
@@ -57,7 +57,7 @@ export default function ProjectChallenge({ slug }: { slug: any }) {
         <Image src="/images/standout1.png" alt="Standout 1" width={600} height={400} className="rounded-xl object-cover w-full " />
         <Image src="/images/standout2.png" alt="Standout 2" width={600} height={400} className="rounded-xl object-cover w-full" />
         </div>
-        <p className="text-[#505050] font-light max-w-5xl">Our ability to understand the café's core values and community roots set us apart. By focusing on authenticity and creating relatable, visually appealing content, we connected the café with its local audience. Additionally, leveraging analytics and real-time feedback ensured that our strategy adapted to trends and customer preferences, maximizing results.</p>
+        <p className="text-[#505050] font-light max-w-5xl">Our ability to understand the café&apos;s core values and community roots set us apart. By focusing on authenticity and creating relatable, visually appealing content, we connected the café with its local audience. Additionally, leveraging analytics and real-time feedback ensured that our strategy adapted to trends and customer preferences, maximizing results.</p>
     </section>
     {/* Result */}
     <section className="mb-10 text-center md:text-left">
@@ -74,14 +74,14 @@ export default function ProjectChallenge({ slug }: { slug: any }) {
     <section className="mb-8 text-center md:text-left">
         <div className="relative bg-[#FEF5E6] border-l-4 border-[#F6D36D] p-6 rounded-xl max-w-4xl overflow-hidden">
             {/* Decorative Icon/Image */}
-            <img
+            <Image
                 src="/images/quote-icon.png"
                 alt="Quote Icon"
                 className="absolute top-0 right-0 w-40 h-30  pointer-events-none select-none"
                 aria-hidden="true"
             />
             <div className="font-medium text-xl text-black mb-2">Breathing New Life into Layers Cafe</div>
-            <div className="text-gray-800 mb-4">“BuzzOne Media completely transformed how we connect with our customers. Their authentic approach and creative content made us stand out in ways we never imagined. Our foot traffic and online presence have grown beyond our expectations. They didn't just market our café; they told our story. We couldn't be happier with the results!”</div>
+            <div className="text-gray-800 mb-4">“BuzzOne Media completely transformed how we connect with our customers. Their authentic approach and creative content made us stand out in ways we never imagined. Our foot traffic and online presence have grown beyond our expectations. They didn&apos;t just market our café; they told our story. We couldn&apos;t be happier with the results!”</div>
             <div className="text-xs text-gray-600">– Sarah L., Owner of Layers Cafe</div>
         </div>
     </section>
