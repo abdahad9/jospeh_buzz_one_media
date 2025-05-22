@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqSection from "../components/FaqSection";
 import CtaBanner from "../components/CtaBanner";
+import BlogGrid from "./BlogGrid";
 
 export default function Blog() {
   return (
@@ -13,9 +14,9 @@ export default function Blog() {
                 <span className="text-[#fff] text-base font-normal">Insight</span>
             </div>
             <h1
-            className="relative font-semibold text-5xl sm:text-6xl md:text-7xl md:leading-[100px] lg:w-[960px] text-center md:text-left lg:mb-12 mb-12"
+            className="relative font-semibold text-5xl sm:text-6xl md:text-7xl md:leading-[100px] leading-[60px] lg:w-[760px] text-center md:text-left lg:mb-12 mb-12"
             >
-                Explore Our Insight <br /> for You
+                Explore Our Insight for You
             </h1>
             <p
             className="mb-8 text-base sm:text-xl font-normal leading-[1.5] tracking-[0.5px] text-center md:text-left"
@@ -31,6 +32,8 @@ export default function Blog() {
             </div>
         </div>
       </Header>
+
+      <BlogGrid />
 
       <CtaBanner /> 
       <FaqSection />

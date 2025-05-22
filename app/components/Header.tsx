@@ -11,7 +11,7 @@ export default function Header({
 }) {
   return (
     <header
-      className="relative min-h-[80vh] flex flex-col justify-between"
+      className="relative md:min-h-[80vh] flex flex-col justify-between"
       style={{ 
         backgroundImage: "url('/images/hero-bg.png')",
         backgroundRepeat: 'no-repeat',

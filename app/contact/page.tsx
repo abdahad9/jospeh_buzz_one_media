@@ -2,6 +2,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqSection from "../components/FaqSection";
 import CtaBanner from "../components/CtaBanner";
+import Image from "next/image";
+import Testimonials from "../components/Testimonials";
 
 export default function Contact() {
   return (
@@ -13,7 +15,7 @@ export default function Contact() {
                 <span className="text-[#fff] text-base font-normal">Contact</span>
             </div>
             <h1
-            className="relative font-semibold text-5xl sm:text-6xl md:text-7xl md:leading-[100px] lg:w-[960px] text-center md:text-left lg:mb-12 mb-12"
+            className="relative font-semibold text-4xl sm:text-6xl md:text-7xl md:leading-[100px] lg:w-[960px] text-center md:text-left lg:mb-12 mb-12"
             >
                 Get in Touch with <br /> Us Today
             </h1>
@@ -25,6 +27,64 @@ export default function Contact() {
         </div>
       </Header>
 
+      <section className="max-w-full mx-auto w-full px-4 md:px-18 py-20">
+        <div className="flex flex-col md:flex-row gap-12">
+          {/* Contact Form */}
+          <form className="flex-1 text-center md:text-start">
+            <div className="flex flex-col md:flex-row gap-8 mb-8">
+              <div className="flex-1">
+                {/* <label className="block text-gray-600 mb-2">First Name</label> */}
+                <input type="text" className="w-full border-0 border-b border-gray-400 focus:border-black outline-none py-2 mb-2 bg-transparent text-[#000]" placeholder="First Name" />
+              </div>
+              <div className="flex-1">
+                {/* <label className="block text-gray-600 mb-2">Last Name</label> */}
+                <input type="text" className="w-full border-0 border-b border-gray-400 focus:border-black outline-none py-2 mb-2 bg-transparent text-[#000]" placeholder="Last Name" />
+              </div>
+            </div>
+            <div className="mb-8">
+              {/* <label className="block text-gray-600 mb-2">Email Address</label> */}
+              <input type="email" className="w-full border-0 border-b border-gray-400 focus:border-black outline-none py-2 mb-2 bg-transparent text-[#000]" placeholder="Email Address" />
+            </div>
+            <div className="mb-8">
+              {/* <label className="block text-gray-600 mb-2">Company</label> */}
+              <input type="text" className="w-full border-0 border-b border-gray-400 focus:border-black outline-none py-2 mb-2 bg-transparent text-[#000]" placeholder="Company" />
+            </div>
+            <div className="mb-8">
+              {/* <label className="block text-gray-600 mb-2">Message</label> */}
+              <textarea rows={4} className="w-full border-0 border-b border-gray-400 focus:border-black outline-none py-2 mb-2 bg-transparent text-[#000]" placeholder="Message" />
+            </div>
+            <button type="submit" className="bg-[#F29F05] cursor-pointer hover:bg-[#e89c1e] text-black px-8 py-3 mt-4 font-normal text-lg transition rounded-none">Submit Message</button>
+          </form>
+
+          {/* Contact Info */}
+          <div className="flex-1 max-w-3xl md:pl-12 mt-12 md:mt-0 text-center md:text-start">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4 text-black">How can we help you?</h2>
+            <p className="text-gray-500 mb-8 text-lg">Kindly fill out this form to provide our team with details about your business requirements</p>
+            <hr className="mb-8" />
+            <div className="flex flex-col text-center md:text-start justify-center items-center md:items-start">
+              <div className="flex items-start gap-4 mb-1">
+                <Image src="/images/icons/mail.svg" alt="Mail" width={28} height={28} />
+                <div className="font-semibold text-2xl text-black">General Inquires</div>
+              </div>
+                <div className="text-[#505050] text-lg mb-6">contact@buzzonemedia.com</div>
+
+              <div className="flex items-start gap-4 mb-1">
+                <Image src="/images/icons/phone.svg" alt="Phone" width={28} height={28} />
+                <div className="font-semibold text-2xl text-black">Toll-Free</div>
+              </div>
+                  <div className="text-gray-700 text-base mb-6">+1-400-123-4567</div>
+
+              <div className="flex items-start gap-4 mb-1">
+                <Image src="/images/icons/map-pin.svg" alt="Location" width={28} height={28} />
+                  <div className="font-semibold text-2xl text-black">Office Address:</div>
+              </div>
+                  <div className="text-gray-700 text-base">109 E Highland Ave, Elgin, Illinois, United States</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Testimonials />
       <CtaBanner /> 
       <FaqSection />
       <Footer />
