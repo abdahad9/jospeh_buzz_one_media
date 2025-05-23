@@ -1,7 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const plans = [
+type Plan = {
+  name: string;
+  price: string;
+  features: string[];
+  button: string;
+  highlight: boolean;
+  enterprise: boolean;
+  badge?: string;
+  background: string;
+};
+
+const plans: Plan[] = [
   {
     name: "Starter Plan",
     price: "$499/month",
@@ -67,30 +78,34 @@ const plans = [
   },
 ];
 
-export default function PricingPlans() {
+export default function PricingPlans({ title = "Flexible Plans for Every Business" }: { title?: string }) {
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-8 md:px-16 lg:px-18 pb-32 sm:pb-20">
       <div className="max-w-full mx-auto">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-12 gap-8">
           <div>
-            <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
-              <span className="w-2 h-2 bg-[#89BCE8] inline-block" />
-              <span className="text-[#505050] text-base font-normal">Our Plan</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 text-[#151515] w-full md:w-3xl pr-0 md:pr-40 leading-10 md:leading-18 text-center md:text-left">Flexible Plans for Every Business</h2>
+            {title === "Flexible Plans for Every Business" && (
+              <div className="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                <span className="w-2 h-2 bg-[#89BCE8] inline-block" />
+                <span className="text-[#505050] text-base font-normal">Our Plan</span>
+              </div>
+            )}
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 text-[#151515] w-full md:w-3xl pr-0 md:pr-40 leading-10 md:leading-18 text-center md:text-left">{title}</h2>
           </div>
-          <p className="text-[#0E0E0E] text-lg font-light max-w-xl mt-2 md:mt-30 w-96 text-center md:text-left mx-auto md:mx-0">
-            Whether you&apos;re a startup or an established brand, we offer customizable packages that fit your needs and budget.
-          </p>
+          {title === "Flexible Plans for Every Business" && (
+            <p className="text-[#0E0E0E] text-lg font-light max-w-xl mt-2 md:mt-30 w-96 text-center md:text-left mx-auto md:mx-0">
+              Whether you&apos;re a startup or an established brand, we offer customizable packages that fit your needs and budget.
+            </p>
+          )}
         </div>
         <div className="overflow-x-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-0">
-            {plans.map((plan, idx) => (
+            {plans.map((plan) => (
               <div
                 key={plan.name}
-                className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r bg-white ${
+                className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r-0 bg-white ${
                   plan.highlight ? "bg-[#F3F7FB] relative" : ""
-                } ${plan.enterprise ? "bg-[#F9E7C3]" : ""} ${idx === plans.length - 1 ? 'mb-32 sm:mb-0' : ''} text-center md:text-left`}
+                } ${plan.enterprise ? "bg-[#F9E7C3]" : ""} text-center md:text-left`}
               >
                 <div className="flex-1 flex flex-col">
                   <div className={`flex flex-col sm:flex-row items-center sm:items-center gap-2 mb-2 bg-[${plan.background}] p-4 border-b border-gray-300 justify-center md:justify-start`}>

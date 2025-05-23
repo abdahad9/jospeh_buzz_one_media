@@ -2,6 +2,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqSection from "../components/FaqSection";
 import CtaBanner from "../components/CtaBanner";
+import PricingPlans from "../components/PricingPlans";
+import Testimonials from "../components/Testimonials";
+import Plans from "./plans";
 
 export default function Pricing() {
   return (
@@ -32,6 +35,9 @@ export default function Pricing() {
         </div>
       </Header>
 
+      <PricingPlans title="Choose The Plan That&apos;s Right For Your Business" />
+      <Plans/>
+      <Testimonials/>
       <CtaBanner /> 
       <FaqSection />
       <Footer />
