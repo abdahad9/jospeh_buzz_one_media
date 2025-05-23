@@ -68,7 +68,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
             <Link href="/services" className={`block py-2 ${isActive("/services") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Services</Link>
           </li>
           <li>
-            <Link href="/works" className={`block py-2 ${isActive("/works") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Works</Link>
+            <Link href="/portfolio" className={`block py-2 ${isActive("/portfolio") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Works</Link>
           </li>
           <li>
             <Link href="/pricing" className={`block py-2 ${isActive("/pricing") ? "text-[#031CA6] font-semibold underline underline-offset-4" : ""}`} onClick={() => setMenuOpen(false)}>Pricing</Link>

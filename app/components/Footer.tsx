@@ -11,11 +11,11 @@ const services = [
 ];
 
 const shortcuts = [
-  { name: "About", href: "#" },
-  { name: "Works", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Insight", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "About", href: "/about" },
+  { name: "Works", href: "/portfolio" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Insight", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const contact = {

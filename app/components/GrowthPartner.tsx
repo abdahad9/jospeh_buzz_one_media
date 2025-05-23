@@ -17,7 +17,7 @@ export default function GrowthPartner() {
             <div className="flex justify-center md:justify-start">
               <Link href="#" className="inline-flex items-center text-[#031CA6] text-base sm:text-lg font-normal group border-b border-[#031CA6] pb-0.5 hover:border-blue-700 transition-all">
                 Learn More
-                <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={20} height={20} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform inline" />
+                <Image src="/images/arrow-right-colored.svg" alt="Right Arrow" width={20} height={20} className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform inline" />
               </Link>
             </div>
           </div>

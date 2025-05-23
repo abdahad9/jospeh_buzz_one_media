@@ -69,7 +69,7 @@ export default function ExpertiseServices() {
                     <div className="flex justify-center md:justify-start">
                       <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max border-b border-[#031CA6]">
                         Learn More
-                        <Image src="/images/arrow-right-colored.png" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
+                        <Image src="/images/arrow-right-colored.svg" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
                       </Link>
                     </div>
                   </div>

@@ -79,6 +79,8 @@ export default function ProjectChallenge({ slug }: { slug: string }) {
                 alt="Quote Icon"
                 className="absolute top-0 right-0 w-40 h-30  pointer-events-none select-none"
                 aria-hidden="true"
+                width={160}
+                height={120}
             />
             <div className="font-medium text-xl text-black mb-2">Breathing New Life into Layers Cafe</div>
             <div className="text-gray-800 mb-4">“BuzzOne Media completely transformed how we connect with our customers. Their authentic approach and creative content made us stand out in ways we never imagined. Our foot traffic and online presence have grown beyond our expectations. They didn&apos;t just market our café; they told our story. We couldn&apos;t be happier with the results!”</div>
