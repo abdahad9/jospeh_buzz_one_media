@@ -5,7 +5,7 @@ export default function HeroBanner() {
     <div className="flex flex-col md:flex-row items-start justify-between w-full px-4 sm:px-8 md:px-0">
       <div className="w-full md:max-w-2xl text-white text-center md:text-left">
         <h1
-          className="relative font-semibold z-10 text-5xl sm:text-6xl md:text-[140px] md:leading-[170px] lg:w-[960px] text-center md:text-left lg:mb-48 mb-12"
+          className="font-semibold text-5xl sm:text-6xl md:text-[110px] md:leading-[155px] lg:w-[830px] text-center md:text-left lg:mb-48 mb-12"
         >
           Empower Your<br />Digital Growth
         </h1>

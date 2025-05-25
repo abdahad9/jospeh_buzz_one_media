@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
 const faqs = [
   {
     question: "How long does it take to see results from your services?",
@@ -45,7 +45,7 @@ export default function FaqSection() {
           </div>
           <Link href="#contact" className="text-[#031CA6] text-xl font-normal hover:text-[#1a2bb5] flex items-center gap-2 w-fit border-b border-[#2A3AFF] pb-1 mx-auto lg:mx-0">
             Contact us
-            <span className="ml-1 text-2xl">&#8594;</span>
+            <Image src="/images/arrow-right-colored.svg" alt="Right Arrow" width={24} height={24} className="ml-1"/>
           </Link>
         </div>
         {/* Right: FAQ Accordion */}

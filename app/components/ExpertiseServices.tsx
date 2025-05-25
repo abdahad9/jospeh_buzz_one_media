@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const services = [
   {
-    icon: "/images/flower.svg",
+    icon: "/images/Flower.svg",
     title: "Content Marketing",
     desc: "Our content marketing services include blog posts, and creative copy designed to increase traffic, build trust, and position your brand.",
   },

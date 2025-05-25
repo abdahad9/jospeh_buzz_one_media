@@ -60,7 +60,7 @@ const plans: Plan[] = [
     background: "#D9DDF6",
   },
   {
-    name: "Enterprise Plan",
+    name: "Enterprise Plandd",
     price: "Custom Quote",
     features: [
       "Tailored Marketing Strategy",

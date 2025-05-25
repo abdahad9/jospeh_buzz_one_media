@@ -54,19 +54,6 @@ const plans: Plan[] = [
     button: "Choose Plan",
     highlight: true,
   },
-  {
-    name: "Enterprise Plan",
-    ideal: "Large corporations and enterprises",
-    seo: "Full SEO Suite with Ongoing Monitoring",
-    social: "Unlimited platforms, custom posting strategy",
-    content: "Tailored strategy with unlimited content",
-    design: "Fully custom and ongoing design support",
-    email: "Fully tailored email strategies",
-    automation: "Full-stack automation solutions",
-    support: "24/7 Dedicated Support",
-    button: "Choose Plan",
-    highlight: false,
-  },
 ];
 
 const features = [

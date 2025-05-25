@@ -19,12 +19,13 @@ export default function ServicesList() {
                   <span className="text-2xl md:text-4xl font-medium text-[#181818]">{service.title}</span>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4 md:pr-100 justify-center md:justify-start">
-                  {service.tags.map((tag) => (
-                    <span key={tag} className="inline-flex items-center bg-[#F1F3FF] text-[#031CA6] text-xs sm:text-sm font-light px-3 py-2 rounded-md whitespace-nowrap">
-                      {tag}
-                      {tag != "See More..." && <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} />}
-                      {/* <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} /> */}
-                    </span>
+                  {service?.subServices?.map((tag) => (
+                    <Link href={`/services/${service.slug}/${tag.subslug}`} key={tag.subslug}>
+                      <span key={tag.subslug} className="inline-flex items-center bg-[#F1F3FF] text-[#031CA6] text-xs sm:text-sm font-light px-3 py-2 rounded-md whitespace-nowrap">
+                        {tag.title}
+                        {tag.subslug != "See More..." && <Image src="/images/arrow-up-right.svg" className="ml-2" alt="arrow-right" width={18} height={10} />}
+                      </span>
+                    </Link>
                   ))}
                 </div>
               </div>

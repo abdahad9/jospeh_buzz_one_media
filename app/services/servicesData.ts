@@ -1,7 +1,7 @@
 const services = [
   {
     slug: "content-marketing",
-    icon: "/images/flower.svg",
+    icon: "/images/Flower.svg",
     title: "Content Marketing",
     tags: [
       "Website Content",
@@ -67,6 +67,33 @@ const services = [
       "Position your brand as a thought leader with professionally written e-books. From research to writing and design, we craft in-depth, value-packed e-books that educate your audience, showcase your expertise, and generate leads. Perfect for sharing insights, tutorials, or case studies.",
       "Bring your ideas to life with captivating scriptwriting for videos, ads, and presentations. Whether it's a promotional video, explainer content, or a corporate presentation, our scripts are tailored to engage, inform, and inspire your audience, driving action and impact."
     ],
+    subServices: [
+      {
+        subslug: "business-website",
+        title: "Business Website",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "consulting-website",
+        title: "Consulting Website",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "landing-page",
+        title: "Landing Page",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "non-profit-website",
+        title: "Non-Profit Website",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "e-commerce",
+        title: "E-Commerce",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      }
+    ],
     description:
       "We design visually appealing, user-friendly, and responsive websites tailored to your brand.",
     heroImage: "/images/services-data.jpg"
@@ -89,6 +116,33 @@ const services = [
       "Position your brand as a thought leader with professionally written e-books. From research to writing and design, we craft in-depth, value-packed e-books that educate your audience, showcase your expertise, and generate leads. Perfect for sharing insights, tutorials, or case studies.",
       "Bring your ideas to life with captivating scriptwriting for videos, ads, and presentations. Whether it's a promotional video, explainer content, or a corporate presentation, our scripts are tailored to engage, inform, and inspire your audience, driving action and impact."
     ],
+    subServices: [
+      {
+        subslug: "e-commerce-service",
+        title: "E-Commerce Service",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "google-maps",
+        title: "Google Maps",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "local-seo",
+        title: "Local SEO",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "mobile-seo",
+        title: "Mobile SEO",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "national-seo",
+        title: "National SEO",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      }
+    ],
     description:
       "Boost your online visibility and rank higher on search engines with our comprehensive SEO strategies.",
     heroImage: "/images/services-data.jpg"
@@ -109,6 +163,28 @@ const services = [
       "Keep your audience informed and engaged with expertly written newsletters. Our content is designed to deliver value straight to your subscribers' inboxes, keeping them connected to your brand. Whether it's updates, promotions, or thought leadership pieces, our newsletters build trust and foster loyalty.",
       "Our blog and article services focus on creating high-quality, SEO-optimized content tailored to your niche. With compelling headlines, well-researched topics, and engaging storytelling, we aim to position your brand as an authority while attracting more traffic to your website.",
       "Position your brand as a thought leader with professionally written e-books. From research to writing and design, we craft in-depth, value-packed e-books that educate your audience, showcase your expertise, and generate leads. Perfect for sharing insights, tutorials, or case studies."
+    ],
+    subServices: [
+      {
+        subslug: "email-management",
+        title: "Email Management",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "calendar-management",
+        title: "Calendar Management",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "lead-generation",
+        title: "Lead Generation",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "market-research",
+        title: "Market Research",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      }
     ],
     description:
       "From administrative tasks to managing schedules and emails, our skilled assistants streamline your daily operations.",
@@ -132,6 +208,33 @@ const services = [
       "Position your brand as a thought leader with professionally written e-books. From research to writing and design, we craft in-depth, value-packed e-books that educate your audience, showcase your expertise, and generate leads. Perfect for sharing insights, tutorials, or case studies.",
       "Bring your ideas to life with captivating scriptwriting for videos, ads, and presentations. Whether it's a promotional video, explainer content, or a corporate presentation, our scripts are tailored to engage, inform, and inspire your audience, driving action and impact."
     ],
+    subServices: [
+      {
+        subslug: "social-media-content",
+        title: "Social Media Content",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "video-content",
+        title: "Video Content",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "ads-content",
+        title: "Ads Content",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "social-media-admin",
+        title: "Social Media Admin",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "social-media-analyst",
+        title: "Social Media Analyst",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      }
+    ],
     description:
       "Grow your brand's presence on social platforms with strategic content, consistent engagement, and targeted campaigns.",
     heroImage: "/images/services-data.jpg"
@@ -151,6 +254,28 @@ const services = [
       "Keep your audience informed and engaged with expertly written newsletters. Our content is designed to deliver value straight to your subscribers' inboxes, keeping them connected to your brand. Whether it's updates, promotions, or thought leadership pieces, our newsletters build trust and foster loyalty.",
       "Our blog and article services focus on creating high-quality, SEO-optimized content tailored to your niche. With compelling headlines, well-researched topics, and engaging storytelling, we aim to position your brand as an authority while attracting more traffic to your website.",
       "Position your brand as a thought leader with professionally written e-books. From research to writing and design, we craft in-depth, value-packed e-books that educate your audience, showcase your expertise, and generate leads. Perfect for sharing insights, tutorials, or case studies."
+    ],
+    subServices: [
+      {
+        subslug: "reputation-management",
+        title: "Reputation Management",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "sales-funnels",
+        title: "Sales Funnels",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "sms-marketing",
+        title: "SMS Marketing",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      },
+      {
+        subslug: "workflow-automation",
+        title: "Workflow Automation",
+        description: "We design visually appealing, user-friendly, and responsive websites tailored to your brand."
+      }
     ],
     description:
       "From email marketing to task automation, we integrate smart tools that save you time, reduce errors, and improve productivity.",
