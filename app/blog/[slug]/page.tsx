@@ -4,14 +4,31 @@ import Navbar from "../../components/Navbar";
 import CtaBanner from "@/app/components/CtaBanner";
 import FaqSection from "@/app/components/FaqSection";
 import Footer from "@/app/components/Footer";
-import blogPosts from "../blogPosts";
+// import blogPosts from "../blogPosts";
 import Link from "next/link";
+import { sanity } from '../../../lib/sanity';
+
+interface BlogPost {
+  title: string;
+  date: string;
+  image: string;
+  category: string;
+  link: string;
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   console.log(slug);
 
-  const post = blogPosts.find((post) => post.link === `/blog/${slug}`);
+  const blogPosts = await sanity.fetch(`*[_type == "blogPost"] | order(date desc){
+    title,
+    "date": date,
+    "image": image.asset->url,
+    category,
+    "link": slug.current
+  }`);
+
+  const post = blogPosts.find((post: BlogPost) => post.link === `/blog/${slug}`);
   if (!post) return notFound();
 
   const randomPosts = blogPosts.sort(() => Math.random() - 0.5).slice(0, 3);
@@ -193,7 +210,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           {/* <a href="/blog" className="text-[#031CA6] text-xl underline font-light">Explore More &rarr;</a> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          {randomPosts.map((post, key) => (
+          {randomPosts.map((post: BlogPost, key: number) => (
             <a href={post.link} key={key} className="block group">
               <div className="overflow-hidden rounded-xl mb-4 text-center md:text-left">
                 <Image

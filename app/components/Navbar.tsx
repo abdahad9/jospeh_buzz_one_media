@@ -7,11 +7,13 @@ import { usePathname } from "next/navigation";
 interface NavbarProps {
   bgClass?: string;
   textClass?: string;
+  bookingLink?: string;
 }
 
-export default function Navbar({ bgClass = "bg-transparent", textClass = "text-white" }: NavbarProps) {
+export default function Navbar({ bgClass = "bg-transparent", textClass = "text-white", bookingLink }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  
 
   // Choose logo based on background
   const logoSrc = bgClass === "bg-white" ? "/images/logo_dark.png" : "/images/logo1.png";
@@ -82,9 +84,14 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
           </li>
         </ul>
       )}
-      <button className="bg-[#F29F05] text-black px-10 py-3 font-normal text-lg hover:bg-[#ffb733] transition cursor-pointer hidden md:block">
+      <a
+        href={bookingLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#F29F05] text-black px-10 py-3 font-normal text-lg hover:bg-[#ffb733] transition cursor-pointer hidden md:block"
+      >
         Book a Call
-      </button>
+      </a>
     </nav>
   );
 } 

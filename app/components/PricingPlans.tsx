@@ -1,84 +1,33 @@
 import Link from "next/link";
 import Image from "next/image";
+import { sanity } from "../../lib/sanity";
 
-type Plan = {
+interface Plan {
   name: string;
   price: string;
   features: string[];
   button: string;
   highlight: boolean;
   enterprise: boolean;
-  badge?: string;
+  badge: string;
   background: string;
-};
+}
 
-const plans: Plan[] = [
-  {
-    name: "Starter Plan",
-    price: "$499/month",
-    features: [
-      "SEO Optimization for 5 pages",
-      "Social Media Management (2 platforms)",
-      "Content Creation: 4 blog posts/month",
-      "Monthly Performance Report",
-    ],
-    button: "Choose Plan",
-    highlight: false,
-    enterprise: false,
-    background: "#E8E8E8",
-  },
-  {
-    name: "Growth Plan",
-    price: "$999/month",
-    features: [
-      "SEO Optimization for 10 pages",
-      "Social Media Management (3 platforms)",
-      "Content Creation: 8 blog posts/month",
-      "Google Ads Setup & Management",
-      "Bi-Weekly Performance Analysis",
-    ],
-    button: "Choose Plan",
-    highlight: false,
-    enterprise: false,
-    background: "#EBF4FB",
-  },
-  {
-    name: "Premium Plan",
-    price: "$1,499/month",
-    features: [
-      "Full Website SEO Optimization",
-      "Social Media Management (5 platforms)",
-      "Content Creation: 12 blog posts/month",
-      "Email Marketing Campaigns",
-      "Advanced Google Ads Management",
-      "Weekly Performance Analysis",
-    ],
-    button: "Choose Plan",
-    highlight: true,
-    enterprise: false,
-    badge: "Recommended",
-    background: "#D9DDF6",
-  },
-  {
-    name: "Enterprise Plandd",
-    price: "Custom Quote",
-    features: [
-      "Tailored Marketing Strategy",
-      "Unlimited SEO & Content Optimization",
-      "Dedicated Account Manager",
-      "Multi-Channel Social Media Management",
-      "PPC and Conversion Optimization",
-      "24/7 Customer Support",
-      "Real-Time Analytics Dashboard",
-    ],
-    button: "Choose Plan",
-    highlight: false,
-    enterprise: true,
-    background: "#FAD99B",
-  },
-];
+export default async function PricingPlans({ title = "Flexible Plans for Every Business" }: { title?: string }) {
 
-export default function PricingPlans({ title = "Flexible Plans for Every Business" }: { title?: string }) {
+  const plans = await sanity.fetch(`
+    *[_type == "businessPlans"]{
+      name,
+      price,
+      features,
+      button,
+      highlight,
+      enterprise,
+      badge,
+      background
+    }
+  `);
+  
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-8 md:px-16 lg:px-18 pb-32 sm:pb-20">
       <div className="max-w-full mx-auto">
@@ -100,7 +49,7 @@ export default function PricingPlans({ title = "Flexible Plans for Every Busines
         </div>
         <div className="overflow-x-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-0">
-            {plans.map((plan) => (
+            {plans.map((plan : Plan) => (
               <div
                 key={plan.name}
                 className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r-0 bg-white ${
@@ -121,7 +70,7 @@ export default function PricingPlans({ title = "Flexible Plans for Every Busines
                     <div className="text-lg font-semibold text-[#151515] mb-6 text-center md:text-left">{plan.price}</div>
                     <div className="mb-2 font-medium text-[#151515] text-center md:text-left">What you&apos;ll get…</div>
                     <ul className="flex-1">
-                      {plan.features.map((feature) => (
+                      {plan.features.map((feature : string) => (
                         <li key={feature} className="flex items-center gap-2 mb-2 text-[#151515] justify-center md:justify-start text-center md:text-left">
                           <Image src="/images/Check-icon.svg" alt="Check" width={30} height={30} className="mt-1" />
                           <span className="text-md font-light">{feature}</span>

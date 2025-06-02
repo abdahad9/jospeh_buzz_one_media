@@ -2,18 +2,34 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import blogPosts from "./blogPosts";
+// import blogPosts from "./blogPosts";
+// import { sanity } from '../../lib/sanity';
 
 const POSTS_PER_PAGE = 9;
 
-export default function BlogGrid() {
+interface BlogPost {
+  _id: string;
+  title: string;
+  slug: string;
+  image: string;
+  date: string;
+  category: string;
+  link: string;
+}
+
+
+export default function BlogGrid({ blogPosts }: { blogPosts: BlogPost[] }){
   const [page, setPage] = useState(1);
+
+  console.log('blogPosts', blogPosts);
+  
   const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
 
   const paginatedPosts = blogPosts.slice(
     (page - 1) * POSTS_PER_PAGE,
     page * POSTS_PER_PAGE
   );
+  // console.log('paginatedPosts', paginatedPosts);
 
   // Helper for rendering page numbers with ellipsis
   const renderPageNumbers = () => {
@@ -41,7 +57,7 @@ export default function BlogGrid() {
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12 md:px-18 px-4 text-center md:text-left">
-        {paginatedPosts.map((post, idx) => (
+        {paginatedPosts.map((post: BlogPost, idx: number) => (
           <a href={post.link} key={idx} className="block group">
             <div className="overflow-hidden rounded-xl mb-4">
               <Image

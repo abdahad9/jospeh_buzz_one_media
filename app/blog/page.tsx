@@ -3,8 +3,17 @@ import Footer from "../components/Footer";
 import FaqSection from "../components/FaqSection";
 import CtaBanner from "../components/CtaBanner";
 import BlogGrid from "./BlogGrid";
+import { sanity } from '../../lib/sanity';
 
-export default function Blog() {
+export default async function Blog() {
+  const blogPosts = await sanity.fetch(`*[_type == "blogPost"] | order(date desc){
+    title,
+    "date": date,
+    "image": image.asset->url,
+    category,
+    "link": slug.current
+  }`);
+
   return (
     <main>
       <Header showClientLogos={false}>
@@ -33,7 +42,7 @@ export default function Blog() {
         </div>
       </Header>
 
-      <BlogGrid />
+      <BlogGrid blogPosts={blogPosts} />
 
       <CtaBanner /> 
       <FaqSection />
