@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "npm run build:sanity && next build",
+    "build:sanity": "cd studio && npm install && npx sanity build && cp -r dist ../public/admin",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,6 +24,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "sanity": "^3.90.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
