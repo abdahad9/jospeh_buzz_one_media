@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npm run build:sanity && next build",
-    "build:sanity": "cd studio && npm install && npx sanity build && cp -r dist ../public/admin",
+    "build": "npm run build:studio && next build",
+    "build:studio": "cd studio && npm install && npm run build && mkdir -p ../public/admin && cp -r dist/* ../public/admin",
     "start": "next start",
     "lint": "next lint"
   },
