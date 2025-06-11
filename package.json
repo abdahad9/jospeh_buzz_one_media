@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "build:studio": "cd studio && npm run build && mkdir -p ../public/admin && cp -r dist/* ../public/admin",
     "start": "next start",

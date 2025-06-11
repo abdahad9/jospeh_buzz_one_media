@@ -27,7 +27,6 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
       background
     }
   `);
-  console.log('plans from sanity', plans);
   
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-8 md:px-16 lg:px-18 pb-32 sm:pb-20">
@@ -53,7 +52,7 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
             {plans.map((plan : Plan) => (
               <div
                 key={plan.name}
-                className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r-0 bg-white ${
+                className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r-1 bg-white ${
                   plan.highlight ? "bg-[#F3F7FB] relative" : ""
                 } ${plan.enterprise ? "bg-[#F9E7C3]" : ""} text-center md:text-left`}
               >
