@@ -27,6 +27,7 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
       background
     }
   `);
+  console.log('plans from sanity', plans);
   
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-8 md:px-16 lg:px-18 pb-32 sm:pb-20">
