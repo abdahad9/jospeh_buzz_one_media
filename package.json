@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "cd studio && npm run build && cd ..",
+    "prebuild": "cd studio && npm install && npm run build && cd ..",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",

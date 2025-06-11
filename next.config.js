@@ -25,6 +25,10 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
+          source: '/admin',
+          destination: '/studio/dist/index.html',
+        },
+        {
           source: '/admin/:path*',
           destination: '/studio/dist/:path*',
         },
