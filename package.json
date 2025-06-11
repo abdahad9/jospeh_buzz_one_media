@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/copy-sanity-static.js",
+    "prebuild": "cd studio && npm run build && cd ..",
     "build": "next build",
     "dev": "next dev",
     "start": "next start",

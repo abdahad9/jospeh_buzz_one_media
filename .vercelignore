@@ -1,1 +1,2 @@
 # Remove studio/ since we need it for the admin route
+# Keep studio folder for admin panel
