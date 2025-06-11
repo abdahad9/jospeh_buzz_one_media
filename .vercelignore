@@ -1,1 +1,1 @@
-studio/
+# Remove studio/ since we need it for the admin route
