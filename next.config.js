@@ -20,13 +20,13 @@ const nextConfig = {
     config.resolve.fallback = { fs: false, path: false }
     return config
   },
-  // Ensure static files are served correctly
+  // Copy Sanity Studio static files to public directory
   async rewrites() {
     return {
       beforeFiles: [
         {
           source: '/static/:path*',
-          destination: '/static/:path*',
+          destination: '/studio/static/:path*',
         },
       ],
     }

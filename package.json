@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prebuild": "node scripts/copy-sanity-static.js",
     "build": "next build",
-    "build:studio": "cd studio && npm run build && mkdir -p ../public/admin && cp -r dist/* ../public/admin",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },
@@ -21,11 +21,13 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/fs-extra": "^11.0.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.2",
+    "fs-extra": "^11.3.0",
     "sanity": "^3.90.0",
     "tailwindcss": "^4",
     "typescript": "^5"
