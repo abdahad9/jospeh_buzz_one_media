@@ -16,17 +16,20 @@ const nextConfig = {
       },
     ]
   },
-  async rewrites() {
-    return [
-      {
-        source: '/admin/:path*',
-        destination: '/admin/:path*',
-      },
-    ]
-  },
   webpack: (config) => {
     config.resolve.fallback = { fs: false, path: false }
     return config
+  },
+  // Ensure static files are served correctly
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: '/static/:path*',
+          destination: '/static/:path*',
+        },
+      ],
+    }
   },
 }
 
