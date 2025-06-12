@@ -17,7 +17,15 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.sanity.io",
+            value: [
+              "default-src 'self'",
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.sanity-cdn.com",
+              "style-src 'self' 'unsafe-inline'",
+              "img-src 'self' data: https:",
+              "font-src 'self' data: https://*.sanity-cdn.com",
+              "connect-src 'self' https://*.sanity.io https://*.sanity-cdn.com",
+              "frame-src 'self' https://*.sanity.studio",
+            ].join('; '),
           },
         ],
       },
@@ -42,6 +50,10 @@ const nextConfig = {
       {
         source: '/admin/:path*',
         destination: '/studio/dist/:path*',
+      },
+      {
+        source: '/static/:path*',
+        destination: '/studio/dist/static/:path*',
       },
     ]
   },
