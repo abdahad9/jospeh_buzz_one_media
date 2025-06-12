@@ -1,6 +1,4 @@
 import {defineConfig} from 'sanity'
-import {deskTool} from 'sanity/desk'
-import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes/index'
 
 export default defineConfig({
@@ -9,7 +7,7 @@ export default defineConfig({
   projectId: 'buzz-one-media',
   dataset: 'production',
   basePath: '/admin',
-  plugins: [deskTool(), visionTool()],
+  plugins: [],
   schema: {
     types: schemaTypes,
   },
