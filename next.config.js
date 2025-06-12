@@ -22,7 +22,7 @@ const nextConfig = {
               "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://*.sanity-cdn.com",
               "style-src 'self' 'unsafe-inline'",
               "img-src 'self' data: https:",
-              "font-src 'self' data: https://*.sanity-cdn.com",
+              "font-src 'self' data: https://*.sanity-cdn.com https://fonts.gstatic.com https://fonts.googleapis.com",
               "connect-src 'self' https://*.sanity.io https://*.sanity-cdn.com",
               "frame-src 'self' https://*.sanity.studio",
             ].join('; '),
@@ -54,6 +54,10 @@ const nextConfig = {
       {
         source: '/static/:path*',
         destination: '/studio/dist/static/:path*',
+      },
+      {
+        source: '/favicon.ico',
+        destination: '/studio/dist/favicon.ico',
       },
     ]
   },
