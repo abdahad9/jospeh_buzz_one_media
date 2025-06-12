@@ -1,21 +1,17 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemaTypes'
+import {schemaTypes} from './schemaTypes/index'
 
 export default defineConfig({
   name: 'default',
-  title: 'buzz-one-media',
-
-  projectId: '1q7001iq',
+  title: 'Buzz One Media',
+  projectId: 'buzz-one-media',
   dataset: 'production',
-
+  basePath: '/admin',
   plugins: [deskTool(), visionTool()],
-
   schema: {
     types: schemaTypes,
   },
-
-  basePath: '/admin',
   outputPath: 'dist',
 })
