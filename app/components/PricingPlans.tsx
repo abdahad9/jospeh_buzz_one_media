@@ -42,7 +42,7 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-normal mb-4 text-[#151515] w-full md:w-3xl pr-0 md:pr-40 leading-10 md:leading-18 text-center md:text-left">{title}</h2>
           </div>
           {title === "Flexible Plans for Every Business" && (
-            <p className="text-[#0E0E0E] text-lg font-light max-w-xl mt-2 md:mt-30 w-96 text-center md:text-left mx-auto md:mx-0">
+            <p className="text-[#0E0E0E] text-lg font-light max-w-xl mt-2 md:mt-30 w-lg-96 w-sm-0 text-center md:text-left mx-auto md:mx-0">
               Whether you&apos;re a startup or an established brand, we offer customizable packages that fit your needs and budget.
             </p>
           )}

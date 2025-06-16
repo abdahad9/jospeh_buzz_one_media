@@ -18,9 +18,6 @@ export default async function Header({
       className="relative md:min-h-[80vh] flex flex-col justify-between"
       style={{ 
         background: "#000",
-        // backgroundRepeat: 'no-repeat',
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center'
       }}
     >
     <Navbar bookingLink={settings?.bookingLink} />
