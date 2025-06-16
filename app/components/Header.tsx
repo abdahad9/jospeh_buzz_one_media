@@ -17,10 +17,10 @@ export default async function Header({
     <header
       className="relative md:min-h-[80vh] flex flex-col justify-between"
       style={{ 
-        backgroundImage: "url('/images/hero-bg.png')",
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundImage: "#000",
+        // backgroundRepeat: 'no-repeat',
+        // backgroundSize: 'cover',
+        // backgroundPosition: 'center'
       }}
     >
     <Navbar bookingLink={settings?.bookingLink} />
