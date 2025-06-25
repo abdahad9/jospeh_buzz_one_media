@@ -26,7 +26,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
   };
 
   return (
-    <nav className={`relative z-12 flex items-center justify-between px-6 md:px-12 py-6 ${bgClass} border-b`} style={{ borderBottomWidth: '1px', borderBottomColor: bgClass === 'bg-white' ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)' }}>
+    <nav className={`relative z-12 flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 ${bgClass} border-b`} style={{ borderBottomWidth: '1px', borderBottomColor: bgClass === 'bg-white' ? 'rgba(0,0,0,0.08)' : 'rgba(255,255,255,0.15)' }}>
       <Link href="/">
         <Image src={logoSrc} alt="Logo" width={80} height={32} style={{ width: 'auto', height: 'auto' }}/>
       </Link>
@@ -41,7 +41,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
         <span className={`block w-6 h-0.5 bg-current transition-transform ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
       </button>
       {/* Desktop menu */}
-      <ul className={`hidden md:flex gap-16 font-normal text-lg ${textClass}`}>
+      <ul className={`hidden md:flex gap-8 lg:gap-12 xl:gap-16 font-normal text-base lg:text-lg ${textClass}`}>
         <li>
           <Link href="/about" className={`${isActive("/about") ? "text-[#F29F05] font-semibold underline underline-offset-4" : "hover:underline"} transition`}>About</Link>
         </li>
@@ -88,7 +88,7 @@ export default function Navbar({ bgClass = "bg-transparent", textClass = "text-w
         href={bookingLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#F29F05] text-black px-10 py-3 font-normal text-lg hover:bg-[#ffb733] transition cursor-pointer hidden md:block"
+        className="bg-[#F29F05] text-black px-6 sm:px-8 lg:px-10 py-3 font-normal text-base lg:text-lg hover:bg-[#ffb733] transition cursor-pointer hidden md:block"
       >
         Book a Call
       </a>

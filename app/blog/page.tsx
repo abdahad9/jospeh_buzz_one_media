@@ -33,18 +33,19 @@ export default async function Blog() {
                 Dive into our latest blog posts to discover how BackOffice can transform your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 w-fit items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
-            <button
-                className="bg-[#FFA800] text-black px-8 py-4 hover:bg-[#ffb733] transition cursor-pointer text-base sm:text-lg font-normal leading-[24px] tracking-[0.5px] w-full sm:w-auto"
+            <a
+                href="#blog-posts"
+                className="bg-[#FFA800] text-black px-8 py-4 hover:bg-[#ffb733] transition cursor-pointer text-base sm:text-lg font-normal leading-[24px] tracking-[0.5px] w-full sm:w-auto text-center"
             >
                 Explore Insight
-            </button> 
+            </a> 
             </div>
         </div>
       </Header>
-
-      <BlogGrid blogPosts={blogPosts} />
-
-      <CtaBanner /> 
+      <div id="blog-posts">
+        <BlogGrid blogPosts={blogPosts} />
+      </div>
+      <CtaBanner />
       <FaqSection />
       <Footer />
     </main>

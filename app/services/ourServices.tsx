@@ -26,7 +26,7 @@ export default function ExpertiseServices() {
         <div className="mb-10 lg:flex text-center md:text-left justify-center md:justify-between items-center">
             <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal my-6 text-[#151515] leading-tight text-center md:text-left">View More of Our Services</h2>
             <div className="">
-            <button className="bg-[#FFA800] text-black px-10 cursor-pointer py-4 font-normal text-lg hover:bg-[#ffb733] transition">See More</button>
+            <Link href="/services" className="bg-[#FFA800] text-black px-10 cursor-pointer py-4 font-normal text-lg hover:bg-[#ffb733] transition">See More</Link>
             </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border border-[#AAB2E4] overflow-hidden">
@@ -35,9 +35,9 @@ export default function ExpertiseServices() {
             // Right border except last col (desktop only)
             if ((idx + 1) % 3 !== 0) borderClasses += " lg:border-r ";
             // Bottom border logic
-            if (idx < 2) borderClasses += " border-b sm:border-0 lg:border-0 "; // mobile only
-            if (idx < 1) borderClasses += " sm:border-b lg:border-0 "; // tablet only
-            if (idx < 0) borderClasses += " lg:border-b "; // desktop only
+            if (idx < 5) borderClasses += " border-b sm:border-0 lg:border-0 "; // mobile only
+            if (idx < 4) borderClasses += " sm:border-b lg:border-0 "; // tablet only
+            if (idx < 3) borderClasses += " lg:border-b "; // desktop only
             borderClasses += " border-[#AAB2E4] ";
             return (
               <div
@@ -50,7 +50,7 @@ export default function ExpertiseServices() {
                     <h3 className="text-3xl font-medium text-[#0E0E0E] mb-3 text-center md:text-left">{service.title}</h3>
                     <p className="text-[#505050] text-base font-light mb-4 pr-0 md:pr-10 text-center md:text-left">{service.desc}</p>
                     <div className="flex justify-center md:justify-start">
-                      <Link href="#" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max border-b border-[#031CA6]">
+                      <Link href="/services" className="inline-flex items-center text-[#031CA6] text-base font-normal group pb-0.5 hover:border-blue-700 transition-all w-max border-b border-[#031CA6]">
                         Learn More
                         <Image src="/images/arrow-right-colored.svg" alt="Right Arrow" width={18} height={18} className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform inline" />
                       </Link>
@@ -61,7 +61,6 @@ export default function ExpertiseServices() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

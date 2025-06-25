@@ -21,7 +21,7 @@ export default async function Header({
       }}
     >
     <Navbar bookingLink={settings?.bookingLink} />
-      <div className="relative z-10 px-4 sm:px-8 md:px-16 lg:px-24 pt-16 pb-6 flex flex-col md:flex-row items-center justify-between flex-1">
+      <div className="relative z-10 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pt-16 pb-6 flex flex-col md:flex-row items-center justify-between flex-1">
         {children}
       </div>
       {showClientLogos && <ClientLogos />}

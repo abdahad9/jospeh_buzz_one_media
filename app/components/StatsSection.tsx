@@ -1,6 +1,6 @@
 export default function StatsSection() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 py-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 py-6 sm:py-8">
     {[
       {
         value: '1,200',
@@ -28,13 +28,13 @@ export default function StatsSection() {
       }
     ].map((stat) => (
       <div key={stat.title} className="flex flex-col items-center md:items-start text-center md:text-left">
-        <span className="text-5xl sm:text-6xl lg:text-7xl font-medium text-black mb-2">
+        <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-black mb-2">
           {stat.value}
           <span className="text-[#041DA6] font-bold">{stat.suffix}</span>
         </span>
-        <span className="text-base sm:text-lg font-normal text-[#505050] mb-4 mt-2">{stat.title}</span>
-        <div className="w-full md:w-88 border-t border-gray-300 mb-4 font-light" />
-        <span className="text-[#505050] font-light text-sm sm:text-base">{stat.desc}</span>
+        <span className="text-sm sm:text-base md:text-lg font-normal text-[#505050] mb-3 sm:mb-4 mt-2">{stat.title}</span>
+        <div className="w-full lg:w-full border-t border-gray-300 mb-3 sm:mb-4 font-light" />
+        <span className="text-[#505050] font-light text-xs sm:text-sm md:text-base">{stat.desc}</span>
       </div>
     ))}
   </div>
