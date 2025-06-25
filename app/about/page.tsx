@@ -1,14 +1,10 @@
-import Testimonials from "../components/Testimonials";
-import FaqSection from "../components/FaqSection";
-import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Image from "next/image";
-import StatsSection from "../components/StatsSection";
-import MissionVisionSection from "./MissionVisionSection";
-import ExpertiseSection from "../components/ExpertiseServices";
-import MeetOurTeam from "./MeetOurTeam";
-import Link from "next/link";
+import Footer from "../components/Footer";
+import FaqSection from "../components/FaqSection";
 import CtaBanner from "../components/CtaBanner";
+import Image from "next/image";
+import Testimonials from "../components/Testimonials";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -27,7 +23,7 @@ export default function About() {
         <p
           className="mb-8 text-base sm:text-xl font-normal leading-[1.5] tracking-[0.5px] text-center md:text-left"
         >
-          Empowering brands to achieve their digital potential through innovative marketing solutions, personalized strategies, and measurable success. Let's take your business to the next level together!
+          Empowering brands to achieve their digital potential through innovative marketing solutions, personalized strategies, and measurable success. Let&apos;s take your business to the next level together!
         </p>
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 w-fit items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
           <Link
