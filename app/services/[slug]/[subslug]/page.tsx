@@ -7,6 +7,7 @@ import Footer from "@/app/components/Footer";
 import FaqSection from "@/app/components/FaqSection";
 import CtaBanner from "@/app/components/CtaBanner";
 import OurServices from "../../ourServices";
+import { sanity } from "@/lib/sanity";
 
 const WhatClientsGet = [
     {
@@ -66,7 +67,8 @@ const WhatClientsGet = [
   
     const subService = service.subServices.find((ss) => ss.subslug === subslug);
     if (!subService) return notFound();
-  
+
+    const settings = await sanity.fetch(`*[_type == "siteSettings"][0]{bookingLink}`);
 
   return (
     <>
@@ -92,9 +94,14 @@ const WhatClientsGet = [
                 {subService.description}
               </p>
               <div className="flex justify-center md:justify-start">
-                <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-medium px-10 py-4 transition w-fit md:w-auto text-base md:text-lg">
+                <a
+                  href={settings?.bookingLink || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-medium px-10 py-4 transition w-fit md:w-auto text-base md:text-lg"
+                >
                     Let&apos;s Talk
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -154,7 +161,14 @@ const WhatClientsGet = [
               <div className="md:w-2/4 w-full flex flex-col gap-8 md:pr-60">
                 <h2 className="text-2xl md:text-5xl md:leading-15 font-medium text-[#181818]">Benefits of Choosing Our Services</h2>
                 <div className="flex justify-center md:justify-start">
-                    <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-normal px-10 py-4 transition w-fit md:w-fit text-base md:text-lg">Let&apos;s Talk</button>
+                    <a
+                      href={settings?.bookingLink || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-normal px-10 py-4 transition w-fit md:w-fit text-base md:text-lg"
+                    >
+                      Let&apos;s Talk
+                    </a>
                 </div>
               </div>
               {/* Right: Numbered List */}

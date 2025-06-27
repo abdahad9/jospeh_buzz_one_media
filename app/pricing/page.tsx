@@ -5,8 +5,11 @@ import CtaBanner from "../components/CtaBanner";
 import PricingPlans from "../components/PricingPlans";
 import Testimonials from "../components/Testimonials";
 import Plans from "./plans";
+import { sanity } from "../../lib/sanity";
 
-export default function Pricing() {
+export default async function Pricing() {
+  const settings = await sanity.fetch(`*[_type == "siteSettings"][0]{bookingLink}`);
+
   return (
     <main>
       <Header showClientLogos={false}>
@@ -26,11 +29,14 @@ export default function Pricing() {
                 We offer flexible pricing options to meet your business needs, whether you&apos;re a startup or an established enterprise
             </p>
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 w-fit items-center md:items-start justify-center md:justify-start mx-auto md:mx-0">
-            <button
+            <a
+                href={settings?.bookingLink || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#FFA800] text-black px-8 py-4 hover:bg-[#ffb733] transition cursor-pointer text-base sm:text-lg font-normal leading-[24px] tracking-[0.5px] w-full sm:w-auto"
             >
                 Let&apos;s Talk
-            </button> 
+            </a> 
             </div>
         </div>
       </Header>

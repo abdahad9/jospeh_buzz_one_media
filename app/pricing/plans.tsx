@@ -52,6 +52,13 @@ export default async function Plans() {
         highlight
       }`);
 
+    // Sort plans: Starter, Growth, Premium
+    const sortedPlans = plans.sort((a: Plan, b: Plan) => {
+      const order = { 'Starter Plan': 1, 'Growth Plan': 2, 'Premium Plan': 3 };
+      const aOrder = order[a.name as keyof typeof order] || 999;
+      const bOrder = order[b.name as keyof typeof order] || 999;
+      return aOrder - bOrder;
+    });
 
   return (
     <section className="max-w-full mx-auto py-16 px-2 md:px-18 text-center md:text-left">
@@ -62,7 +69,7 @@ export default async function Plans() {
           <thead>
             <tr className="border-b border-gray-200">
               <th className="text-left text-2xl font-medium py-4 px-4 bg-white text-black">Creation</th>
-              {plans.map((plan: Plan) => (
+              {sortedPlans.map((plan: Plan) => (
                 <th
                   key={plan.name}
                   className={`text-2xl font-medium py-4 px-6 text-black ${plan.highlight ? "bg-[#F1F3FF]" : "bg-white"}`}
@@ -76,7 +83,7 @@ export default async function Plans() {
             {features.map((feature) => (
               <tr key={feature.key} className="border-t  text-black border-b border-gray-200">
                 <td className="text-left py-8 px-6 font-medium text-[#181818] bg-white ">{feature.label}</td>
-                {plans.map((plan: Plan) => (
+                {sortedPlans.map((plan: Plan) => (
                   <td
                     key={plan.name + feature.key}
                     className={`py-4 px-6 font-light text-[#505050] ${plan.highlight ? "bg-[#F1F3FF]" : "bg-white"}`}
@@ -88,7 +95,7 @@ export default async function Plans() {
             ))}
             <tr className="border-t border-gray-200 text-black">
               <td className="bg-white text-black"></td>
-              {plans.map((plan: Plan) => (
+              {sortedPlans.map((plan: Plan) => (
                 <td
                   key={plan.name + "btn"}
                   className={`py-6 px-6 text-black ${plan.highlight ? "bg-[#F1F3FF]" : "bg-white"}`}

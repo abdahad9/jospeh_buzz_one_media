@@ -28,7 +28,15 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
     }
   `);
 
-  console.log('plans', plans);
+  // Sort plans: Starter, Growth, Premium
+  const sortedPlans = plans.sort((a: Plan, b: Plan) => {
+    const order = { 'Starter Plan': 1, 'Growth Plan': 2, 'Premium Plan': 3 };
+    const aOrder = order[a.name as keyof typeof order] || 999;
+    const bOrder = order[b.name as keyof typeof order] || 999;
+    return aOrder - bOrder;
+  });
+
+  console.log('plans', sortedPlans);
   
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 pb-16 sm:pb-20 md:pb-24 lg:pb-32">
@@ -51,7 +59,7 @@ export default async function PricingPlans({ title = "Flexible Plans for Every B
         </div>
         <div className="overflow-x-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-0">
-            {plans.map((plan : Plan) => (
+            {sortedPlans.map((plan : Plan) => (
               <div
                 key={plan.name}
                 className={`flex flex-col h-full border border-gray-300 sm:border-r-0 last:border-r sm:last:border-r-0 lg:border-r-0 lg:last:border-r-1 bg-white ${

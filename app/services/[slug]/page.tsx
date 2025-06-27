@@ -8,11 +8,14 @@ import CtaBanner from "@/app/components/CtaBanner";
 import FaqSection from "@/app/components/FaqSection";
 import Footer from "@/app/components/Footer";   
 import OurServices from "../ourServices";
+import { sanity } from "@/lib/sanity";
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const service = services.find((s) => s.slug === slug);
   if (!service) return notFound();
+
+  const settings = await sanity.fetch(`*[_type == "siteSettings"][0]{bookingLink}`);
 
   // Only show these sections for Content Marketing for now
   const isContentMarketing = service.slug === "content-marketing" || service.slug === "website-designer" || service.slug === "seo-service" || service.slug === "virtual-assistant" || service.slug === "social-media" || service.slug === "automations";
@@ -39,9 +42,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 {service.description}
               </p>
               <div className="flex justify-center md:justify-start">
-                <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-medium px-10 py-4 transition w-fit md:w-auto text-base md:text-lg text-center md:text-left">
+                <a
+                  href={settings?.bookingLink || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-medium px-10 py-4 transition w-fit md:w-auto text-base md:text-lg text-center md:text-left"
+                >
                     Let&apos;s Talk
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -91,7 +99,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 <h2 className="text-2xl md:text-5xl md:leading-15 font-medium text-[#181818]">What&apos;s Included in Our Content Marketing</h2>
                 <p className="text-[#505050] text-base md:text-lg font-light">Our comprehensive content marketing service covers all the essentials to help your brand stand out.</p>
                 <div className="flex justify-center md:justify-start text-center md:text-left">
-                    <button className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-normal px-10 py-4 transition w-fit md:w-fit text-base md:text-lg">Let&apos;s Talk</button>
+                    <a
+                      href={settings?.bookingLink || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#F29F05] hover:bg-[#b97f2e] text-black font-normal px-10 py-4 transition w-fit md:w-fit text-base md:text-lg"
+                    >
+                      Let&apos;s Talk
+                    </a>
                 </div>
               </div>
               {/* Right: Numbered List */}
